@@ -2,7 +2,6 @@
 import React, { useEffect, Suspense } from "react";
 import { useForm } from "react-hook-form";
 import { useSearchParams } from "next/navigation";
-import { useState } from "react";
 
 function GetConnectedForm() {
   const searchParams = useSearchParams();
@@ -18,30 +17,35 @@ function GetConnectedForm() {
   } = useForm();
 
   useEffect(() => {
-    if (preSelectedPlan) {
-      setValue("plan", preSelectedPlan);
-    }
+    if (preSelectedPlan) setValue("plan", preSelectedPlan);
   }, [preSelectedPlan, setValue]);
 
   useEffect(() => {
-    if (preSelectedDeal) {
-      setValue("deal", preSelectedDeal);
-    }
+    if (preSelectedDeal) setValue("deal", preSelectedDeal);
   }, [preSelectedDeal, setValue]);
 
-  const delay = (d) =>
-    new Promise((resolve) => setTimeout(resolve, d * 1000));
-
   const onSubmit = async (data) => {
-    let r = await fetch("https://maxbackend-production.up.railway.app/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-    let res = await r.text();
-    // console.log(data, res);
+    try {
+      const response = await fetch(
+        "https://maxbackend-production.up.railway.app/",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }
+      );
+
+      const resData = await response.json();
+
+      if (resData.success) {
+        alert("Form submitted successfully!");
+      } else {
+        alert("Error: " + resData.error);
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Network error. Please try again.");
+    }
   };
 
   return (
@@ -74,7 +78,6 @@ function GetConnectedForm() {
           </p>
         )}
 
-        {/* NAME ENTRY */}
         <input
           {...register("name", {
             required: "Name is required",
@@ -91,10 +94,7 @@ function GetConnectedForm() {
             required: "Enter valid number",
             minLength: { value: 11, message: "Must be 11 digits" },
             maxLength: { value: 11, message: "Must be 11 digits" },
-            pattern: {
-              value: /^[0][0-9]{10}$/,
-              message: "Number must start with 0",
-            },
+            pattern: { value: /^[0][0-9]{10}$/, message: "Number must start with 0" },
           })}
           type="tel"
           placeholder="Phone No"
@@ -102,21 +102,14 @@ function GetConnectedForm() {
         />
 
         <input
-          {...register("houseNo", {
-            required: "House Number Required",
-            minLength: 1,
-            maxLength: 10,
-          })}
+          {...register("houseNo", { required: "House Number Required", minLength: 1, maxLength: 10 })}
           type="text"
           placeholder="House No"
           className="p-2 border rounded focus:outline-none focus:ring focus:ring-blue-300"
         />
 
-        {/* FLOOR */}
         <select
-          {...register("floor", {
-            required: "SELECT FLOOR",
-          })}
+          {...register("floor", { required: "SELECT FLOOR" })}
           className="p-2 border rounded bg-white focus:outline-none focus:ring focus:ring-blue-300"
         >
           <option value="">Select Floor</option>
@@ -127,11 +120,8 @@ function GetConnectedForm() {
           <option value="4th">Other</option>
         </select>
 
-        {/* BLOCK */}
         <select
-          {...register("block", {
-            required: "SELECT BLOCK",
-          })}
+          {...register("block", { required: "SELECT BLOCK" })}
           className="p-2 border rounded bg-white focus:outline-none focus:ring focus:ring-blue-300"
         >
           <option value="">Select Block</option>
@@ -140,11 +130,8 @@ function GetConnectedForm() {
           <option value="15">Block 15</option>
         </select>
 
-        {/* CONNECTION TYPE */}
         <select
-          {...register("type", {
-            required: !preSelectedDeal ? "SELECT CONNECTION TYPE" : false,
-          })}
+          {...register("type", { required: !preSelectedDeal ? "SELECT CONNECTION TYPE" : false })}
           disabled={!!preSelectedDeal}
           className="p-2 border rounded bg-white focus:outline-none focus:ring focus:ring-blue-300 disabled:cursor-not-allowed disabled:bg-gray-700 disabled:text-white"
         >
@@ -153,7 +140,6 @@ function GetConnectedForm() {
           <option value="fibre">Fibre to Home</option>
         </select>
 
-        {/* DEAL */}
         <select
           {...register("deal")}
           disabled={!!preSelectedDeal}
@@ -169,11 +155,8 @@ function GetConnectedForm() {
           <option value="d7">Deal Seven</option>
         </select>
 
-        {/* PLAN */}
         <select
-          {...register("plan", {
-            required: !preSelectedPlan && !preSelectedDeal ? "SELECT PLAN" : false,
-          })}
+          {...register("plan", { required: !preSelectedPlan && !preSelectedDeal ? "SELECT PLAN" : false })}
           disabled={!!preSelectedPlan || !!preSelectedDeal}
           className="p-2 border rounded bg-white focus:outline-none focus:ring focus:ring-blue-300 disabled:cursor-not-allowed disabled:bg-gray-700 disabled:text-white"
         >
@@ -211,15 +194,17 @@ function GetConnectedForm() {
 function GetConnectedPage() {
   return (
     <div className="mt-20 flex flex-col items-center justify-center min-h-fit py-10 px-6 shadow-lg rounded-lg">
-      <Suspense fallback={
-        <div className="flex flex-col items-center">
-          <h1 className="text-2xl font-bold text-gray-300 mb-6 text-center">
-            Let <span className="text-blue-600">Maxnet</span> Connect You to the{" "}
-            <span className="text-blue-600">World</span>
-          </h1>
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-        </div>
-      }>
+      <Suspense
+        fallback={
+          <div className="flex flex-col items-center">
+            <h1 className="text-2xl font-bold text-gray-300 mb-6 text-center">
+              Let <span className="text-blue-600">Maxnet</span> Connect You to the{" "}
+              <span className="text-blue-600">World</span>
+            </h1>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+          </div>
+        }
+      >
         <GetConnectedForm />
       </Suspense>
     </div>
