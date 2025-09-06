@@ -1,20 +1,26 @@
 "use client";
-import { FaUserCircle } from "react-icons/fa";
 
-export default function OldestUserCard({username,address}) {
+export default function OldestUserCard({ username, address, badge = "Founding Member" }) {
   return (
-    <div className="m-10 text-white flex items-center justify-center">
+    <div className="m-4 w-72 rounded-xl bg-white/10 backdrop-blur-md 
+                    border border-white/20 shadow-md 
+                    hover:scale-105 hover:shadow-xl 
+                    transition-all duration-300 ease-in-out">
+      <div className="p-6 flex flex-col items-center text-center">
+        
+        {/* Badge */}
+        <span className="mb-3 text-xs font-semibold px-3 py-1 
+                         bg-cyan-500/80 text-white rounded-full shadow-sm">
+          {badge}
+        </span>
 
-      <div className="w-64 aspect-square rounded-full border border-white/15 bg-white/5 shadow-2xl flex flex-col items-center justify-center text-center p-6">
-        <div className="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mb-3">
-          <FaUserCircle className="w-16 h-16" />
-        </div>
+        {/* Username */}
+        <h3 className="text-lg font-bold text-white">
+          {username}
+        </h3>
 
-        <h3 className="text-base font-semibold mb-1">Our Oldest User</h3>
-
-        <p className="text-sm opacity-90">{username}</p>
-
-        <p className="text-xs opacity-70 mt-2">
+        {/* Address */}
+        <p className="mt-1 text-sm text-gray-200">
           {address}
         </p>
       </div>

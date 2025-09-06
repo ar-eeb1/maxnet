@@ -1,35 +1,59 @@
 "use client"
 import React from "react";
+import Team from "../components/Team";
 import Image from "next/image";
-
 import OldestUserCard from "../components/OldestUserCard";
 
 function Page() {
   return (
-    <div className="bg-black min-h-screen pt-40">
+    <div className="min-h-screen ">
       {/* About Section */}
-      <div className="px-10 md:px-40 py-16">
-        <h1 className="text-white text-5xl font-bold mb-6">About Maxnet</h1>
-        <p className="text-2xl text-gray-100 leading-relaxed">
-          Seventeen years ago, a group of friendly neighbors came together with a simple passion —
-          playing Counter-Strike 1.6. To connect with each other, they ran Ethernet wires across
-          their homes and built a small local server. What started as a pastime soon grew into
-          something much bigger.
-          <br /><br />
-          That very server has now grown into a vibrant community of <span className="font-bold">1,400+ users</span>.
-          This was the beginning of <span className="font-bold">Maxnet</span>, founded by Uzair and Adnan.
-          Later, Uzair entrusted the project to his beloved brother Noman, whose dedication and
-          tireless efforts turned Maxnet into what it is today.
-          <br /><br />
-          <span className="font-bold">Alhamdulillah</span>, with pure hard work, passion, and the unwavering
-          support of our beloved users, Maxnet has grown to become the <span className="font-bold">one of the best in our area</span>.
-          Managed by an experienced and committed team, our promise has always been clear: to deliver
-          the best possible service without compromise — and that dedication will never fade.
-        </p>
+      <div className="px-6 md:px-32 py-16 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+        <h1 className="text-white text-5xl font-extrabold mb-6 text-center">
+          About <span className="text-cyan-400">Maxnet</span>
+        </h1>
+
+        {/* About Text */}
+        <div className="max-w-4xl mx-auto text-gray-100 leading-relaxed text-lg md:text-xl space-y-6">
+          <p>
+            Seventeen years ago, a group of neighbors, united by a passion for gaming and connectivity,
+            wove the first strands of what would become <span className="font-bold text-white">Maxnet</span>.
+            They literally ran Ethernet cables between their homes, creating a small local network that was
+            the heartbeat of our early community. This humble beginning, powered by pure ingenuity and a
+            desire to connect, was the first chapter of our story.
+          </p>
+
+          <p>
+            That initial spark ignited a vision. Under the guidance of our founders,{" "}
+            <span className="font-bold text-white">Uzair</span> and{" "}
+            <span className="font-bold text-white">Adnan</span>, the small network grew into a vibrant
+            community. The torch was then passed to{" "}
+            <span className="font-bold text-white">Noman</span>, whose tireless dedication transformed
+            Maxnet into the fiber-optic powerhouse it is today.
+          </p>
+
+          <p>
+            <span className="font-bold text-cyan-400">Alhamdulillah</span>, through relentless hard work,
+            unwavering passion, and the trust of our users, we've become the{" "}
+            <span className="font-bold">premier fiber provider</span> in our area. At Maxnet, we believe in
+            a future powered by light-speed connectivity. That's why we bring a{" "}
+            <span className="font-bold">100% pure fiber connection</span> directly to your home, ensuring
+            a network that is not just fast, but reliable and future-proof.
+          </p>
+
+          <p>
+            Our promise has always been and will remain the same: to deliver the best possible service
+            without compromise. Maxnet is managed by a committed and experienced team, dedicated to
+            upholding the legacy of community and innovation that started it all. We are more than an ISP;
+            <span className="font-bold"> we are your neighbors</span>, committed to bringing the world to
+            your doorstep.
+          </p>
+        </div>
       </div>
 
+
       {/* Why Choose Section */}
-      <div className="experience bg-white text-center py-20">
+      <div className="experience bg-black text-center py-20">
         <h1 className="text-4xl md:text-7xl font-extrabold text-cyan-500 mb-6">
           Why Choose MaxNet
         </h1>
@@ -91,20 +115,77 @@ function Page() {
         </div>
       </div>
 
+
+      <div className="px-6 md:px-20 py-16 bg-gray-900 text-white">
+        <h2 className="text-3xl font-bold mb-10 text-center">Meet Our Team</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          <Team name="Muhammad Noman" role="CEO" />
+          <Team name="Muhammad Adnan" role="CEO" />
+          <Team name="Minhaj Uddin Babar" role="Co-Founder , IT-Administrator" image="/min.png"  />
+          <Team name="Najeeb ur Rehman" role="IT-Tech , Manager"  />
+          <Team name="Zaid" role="IT-Tech , Manager" image="/zaid.jpg" />
+          <Team name="Areeb Khan" role="IT-Support , Recovery-Officer" image="/areeb.jpg" />
+          <Team name="Rashid" role="IT-Tech" />
+          <Team name="Rehan" role="Jr IT-Tech" />
+          <Team name="Hasnain" role="Jr IT-Tech" />
+
+        </div>
+      </div>
+
       {/* Legacy Connections */}
-      <h1 className="text-white px-10 md:px-40 mt-12 mb-6">Legacy Connections</h1>
-      <OldestUserCard
-        username="SOON"
-        address="SOON"
-      />
-      <OldestUserCard
-        username="SOON"
-        address="SOON"
-      />
-      <OldestUserCard
-        username="SOON"
-        address="SOON"
-      />
+      <div className="bg-gray-600 text-center pt-5">
+        <h1 className="text-white px-10 md:px-40 mt-12 mb-6 text-5xl font-bold">Early Adopter </h1>
+        <div className=" flex flex-wrap flex-row justify-around  ">
+
+          <OldestUserCard username="Saghir" address="R-11"/>
+          <OldestUserCard username="Wajahat" address="R-28"/>
+          <OldestUserCard username="Majid" address="R-31"/>
+          <OldestUserCard username="Mubashir" address="R-43"/>
+          <OldestUserCard username="Javaid" address="R-57"/>
+          <OldestUserCard username="Yasir" address="R-61"/>
+          <OldestUserCard username="Mohsin" address="R-84"/>
+          <OldestUserCard username="Bilal" address="R-134"/>
+          <OldestUserCard username="Saleem" address="R-135"/>
+          <OldestUserCard username="Amir" address="R-135"/>
+          <OldestUserCard username="Anas" address="R-143"/>
+          <OldestUserCard username="Danish" address="R-152"/>
+          <OldestUserCard username="Shehzil" address="R-184"/>
+          <OldestUserCard username="Usama" address="R-211"/>
+          <OldestUserCard username="Saqib" address="R-213"/>
+          <OldestUserCard username="Noman" address="R-213"/>
+          <OldestUserCard username="Yaseen" address="R-214"/>
+          <OldestUserCard username="Anas" address="R-220"/>
+          <OldestUserCard username="Rehan" address="R-221"/>
+          <OldestUserCard username="Hashir" address="R-225"/>
+          <OldestUserCard username="Bilal" address="R-230"/>
+          <OldestUserCard username="Fahad" address="R-244"/>
+          <OldestUserCard username="Bilal" address="R-245"/>
+          <OldestUserCard username="Minhaj" address="R-252"/>
+          <OldestUserCard username="Zakir" address="R-255"/>
+          <OldestUserCard username="Azhar" address="R-255"/>
+          <OldestUserCard username="Kami" address="R-261"/>
+          <OldestUserCard username="Irtaza" address="R-262"/>
+          <OldestUserCard username="Asif" address="R-280"/>
+          <OldestUserCard username="Azlan" address="R-283"/>
+          <OldestUserCard username="Umais" address="R-285"/>
+          <OldestUserCard username="Mani" address="R-295"/>
+          <OldestUserCard username="Imran" address="R-315"/>
+          <OldestUserCard username="Zia " address="R-318"/>
+          <OldestUserCard username="Faiz" address="R-332"/>
+          <OldestUserCard username="Umair" address="R-335"/>
+          <OldestUserCard username="Ashad" address="R-347"/>
+          <OldestUserCard username="Raja" address="R-349"/>
+          <OldestUserCard username="Faisal" address="R-351"/>
+          <OldestUserCard username="Imran" address="R-376"/>
+          <OldestUserCard username="Taimoor" address="R-377"/>
+          <OldestUserCard username="Abdullah" address="R-391"/>
+          <OldestUserCard username="Abeer" address="R-393"/>
+          <OldestUserCard username="Osama" address="R-426"/>
+          <OldestUserCard username="Fahad" address="R-426"/>
+
+
+        </div>
+      </div>
 
     </div>
   );

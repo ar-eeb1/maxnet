@@ -45,7 +45,7 @@ function Deal() {
                             DEAL TWO
                         </div>
                         <div className="p-6 text-center">
-                            <h2 className="text-2xl font-bold text-gray-800">FIBRE OPTIC DEAL</h2>
+                            <h2 className="text-2xl font-bold text-gray-800">Fiber OPTIC DEAL</h2>
                             <h5 className="text-2xl font-semibold text-gray-700 mt-2">
                                 Rs8000
                             </h5>
@@ -53,7 +53,7 @@ function Deal() {
 
                         <ul className="space-y-1 text-gray-700 px-8 pb-6 text-left">
                             <li className="decoration-1">Huawei HG145v5 ~ 5Dbi (USED)</li>
-                            <li className="decoration-1">Fibre Optic</li>
+                            <li className="decoration-1">Fiber Optic</li>
                             <li className="decoration-1">GPON-Pure-17Mb</li>
                             <li className="decoration-1">Connection Charges</li>
                         </ul>
@@ -73,7 +73,7 @@ function Deal() {
                             DEAL THREE
                         </div>
                         <div className="p-6 text-center">
-                            <h2 className="text-2xl font-bold text-gray-800">FIBRE OPTIC DEAL</h2>
+                            <h2 className="text-2xl font-bold text-gray-800">Fiber OPTIC DEAL</h2>
                             <h5 className="text-2xl font-semibold text-gray-700 mt-2">
                                 Rs9000
                             </h5>
@@ -81,7 +81,7 @@ function Deal() {
 
                         <ul className="space-y-1 text-gray-700 px-8 pb-6 text-left">
                             <li className="decoration-1">Huawei HG8245Q2 ~ 5Ghz (USED)</li>
-                            <li className="decoration-1">Fibre Optic</li>
+                            <li className="decoration-1">Fiber Optic</li>
                             <li className="decoration-1">GPON-Pure-17Mb</li>
                             <li className="decoration-1">Connection Charges</li>
                         </ul>
@@ -101,7 +101,7 @@ function Deal() {
                             DEAL FOUR
                         </div>
                         <div className="p-6 text-center">
-                            <h2 className="text-2xl font-bold text-gray-800">FIBRE OPTIC DEAL</h2>
+                            <h2 className="text-2xl font-bold text-gray-800">Fiber OPTIC DEAL</h2>
                             <h5 className="text-2xl font-semibold text-gray-700 mt-2">
                                 Rs10500
                             </h5>
@@ -109,7 +109,7 @@ function Deal() {
 
                         <ul className="space-y-1 text-gray-700 px-8 pb-6 text-left">
                             <li className="decoration-1">VSOL V2804 5Ghz ~ NEW</li>
-                            <li className="decoration-1">Fibre Optic</li>
+                            <li className="decoration-1">Fiber Optic</li>
                             <li className="decoration-1">GPON-Pure-17Mb</li>
                             <li className="decoration-1">Connection Charges</li>
                         </ul>
@@ -129,7 +129,7 @@ function Deal() {
                             DEAL FIVE
                         </div>
                         <div className="p-6 text-center">
-                            <h2 className="text-2xl font-bold text-gray-800">FIBRE OPTIC DEAL</h2>
+                            <h2 className="text-2xl font-bold text-gray-800">Fiber OPTIC DEAL</h2>
                             <h5 className="text-2xl font-semibold text-gray-700 mt-2">
                                 Rs8500
                             </h5>
@@ -137,7 +137,7 @@ function Deal() {
 
                         <ul className="space-y-1 text-gray-700 px-8 pb-6 text-left">
                             <li className="decoration-1">VSOL V2802 2.4Ghz ~ NEW</li>
-                            <li className="decoration-1">Fibre Optic</li>
+                            <li className="decoration-1">Fiber Optic</li>
                             <li className="decoration-1">GPON-Pure-17Mb</li>
                             <li className="decoration-1">Connection Charges</li>
                         </ul>
@@ -157,7 +157,7 @@ function Deal() {
                             DEAL SIX
                         </div>
                         <div className="p-6 text-center">
-                            <h2 className="text-2xl font-bold text-gray-800">FIBRE OPTIC DEAL</h2>
+                            <h2 className="text-2xl font-bold text-gray-800">Fiber OPTIC DEAL</h2>
                             <h5 className="text-2xl font-semibold text-gray-700 mt-2">
                                 Rs7000
                             </h5>
@@ -165,7 +165,7 @@ function Deal() {
 
                         <ul className="space-y-1 text-gray-700 px-8 pb-6 text-left">
                             <li className="decoration-1">Huawei C5 ~ 2.4Ghz (USED)</li>
-                            <li className="decoration-1">Fibre Optic</li>
+                            <li className="decoration-1">Fiber Optic</li>
                             <li className="decoration-1">GPON-Pure-17Mb</li>
                             <li className="decoration-1">Connection Charges</li>
                         </ul>

@@ -33,7 +33,7 @@ function GetConnectedForm() {
     new Promise((resolve) => setTimeout(resolve, d * 1000));
 
   const onSubmit = async (data) => {
-    let r = await fetch("http://192.168.0.104:3100/", {
+    let r = await fetch("https://maxbackend-production.up.railway.app/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
