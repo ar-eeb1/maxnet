@@ -1,10 +1,10 @@
 "use client"
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense } from "react";
 import { useForm } from "react-hook-form";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 
-function GetConnectedPage() {
+function GetConnectedForm() {
   const searchParams = useSearchParams();
   const preSelectedPlan = searchParams.get("plan");
   const preSelectedDeal = searchParams.get("deal");
@@ -45,7 +45,7 @@ function GetConnectedPage() {
   };
 
   return (
-    <div className="mt-20 flex flex-col items-center justify-center min-h-fit py-10 px-6 shadow-lg rounded-lg">
+    <>
       <h1 className="text-2xl font-bold text-gray-300 mb-6 text-center">
         Let <span className="text-blue-600">Maxnet</span> Connect You to the{" "}
         <span className="text-blue-600">World</span>
@@ -143,7 +143,7 @@ function GetConnectedPage() {
         {/* CONNECTION TYPE */}
         <select
           {...register("type", {
-            required: "SELECT CONNECTION TYPE",
+            required: !preSelectedDeal ? "SELECT CONNECTION TYPE" : false,
           })}
           disabled={!!preSelectedDeal}
           className="p-2 border rounded bg-white focus:outline-none focus:ring focus:ring-blue-300 disabled:cursor-not-allowed disabled:bg-gray-700 disabled:text-white"
@@ -172,7 +172,7 @@ function GetConnectedPage() {
         {/* PLAN */}
         <select
           {...register("plan", {
-            required: "SELECT PLAN",
+            required: !preSelectedPlan && !preSelectedDeal ? "SELECT PLAN" : false,
           })}
           disabled={!!preSelectedPlan || !!preSelectedDeal}
           className="p-2 border rounded bg-white focus:outline-none focus:ring focus:ring-blue-300 disabled:cursor-not-allowed disabled:bg-gray-700 disabled:text-white"
@@ -204,6 +204,24 @@ function GetConnectedPage() {
           className="mt-4 p-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded transition disabled:bg-gray-800"
         />
       </form>
+    </>
+  );
+}
+
+function GetConnectedPage() {
+  return (
+    <div className="mt-20 flex flex-col items-center justify-center min-h-fit py-10 px-6 shadow-lg rounded-lg">
+      <Suspense fallback={
+        <div className="flex flex-col items-center">
+          <h1 className="text-2xl font-bold text-gray-300 mb-6 text-center">
+            Let <span className="text-blue-600">Maxnet</span> Connect You to the{" "}
+            <span className="text-blue-600">World</span>
+          </h1>
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+        </div>
+      }>
+        <GetConnectedForm />
+      </Suspense>
     </div>
   );
 }
