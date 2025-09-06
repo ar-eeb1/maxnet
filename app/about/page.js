@@ -34,9 +34,9 @@ function Page() {
 
           <p>
             <span className="font-bold text-cyan-400">Alhamdulillah</span>, through relentless hard work,
-            unwavering passion, and the trust of our users, we've become the{" "}
+            unwavering passion, and the trust of our users, we&apos;ve become the{" "}
             <span className="font-bold">premier fiber provider</span> in our area. At Maxnet, we believe in
-            a future powered by light-speed connectivity. That's why we bring a{" "}
+            a future powered by light-speed connectivity. That&apos;s why we bring a{" "}
             <span className="font-bold">100% pure fiber connection</span> directly to your home, ensuring
             a network that is not just fast, but reliable and future-proof.
           </p>
@@ -51,14 +51,13 @@ function Page() {
         </div>
       </div>
 
-
       {/* Why Choose Section */}
       <div className="experience bg-black text-center py-20">
         <h1 className="text-4xl md:text-7xl font-extrabold text-cyan-500 mb-6">
           Why Choose MaxNet
         </h1>
         <p className="text-gray-700 text-lg mb-12 max-w-2xl mx-auto">
-          With 17 years of experience and a commitment to excellence, we&apos;re not just an ISP —
+          With 17 years of experience and a commitment to excellence, we&apos;re not just an ISP — 
           we&apos;re your connectivity partner.
         </p>
 
@@ -115,7 +114,6 @@ function Page() {
         </div>
       </div>
 
-
       <div className="px-6 md:px-20 py-16 bg-gray-900 text-white">
         <h2 className="text-3xl font-bold mb-10 text-center">Meet Our Team</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
@@ -128,7 +126,6 @@ function Page() {
           <Team name="Rashid" role="IT-Tech" />
           <Team name="Rehan" role="Jr IT-Tech" />
           <Team name="Hasnain" role="Jr IT-Tech" />
-
         </div>
       </div>
 
@@ -136,7 +133,6 @@ function Page() {
       <div className="bg-gray-600 text-center pt-5">
         <h1 className="text-white px-10 md:px-40 mt-12 mb-6 text-5xl font-bold">Early Adopter </h1>
         <div className=" flex flex-wrap flex-row justify-around  ">
-
           <OldestUserCard username="Saghir" address="R-11"/>
           <OldestUserCard username="Wajahat" address="R-28"/>
           <OldestUserCard username="Majid" address="R-31"/>
@@ -182,11 +178,8 @@ function Page() {
           <OldestUserCard username="Abeer" address="R-393"/>
           <OldestUserCard username="Osama" address="R-426"/>
           <OldestUserCard username="Fahad" address="R-426"/>
-
-
         </div>
       </div>
-
     </div>
   );
 }
