@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+html {
+  scroll-behavior: smooth;
+    /* scroll-padding-top: 90px;  */
+}
+
+
+:root {
+  --prime: #0F2027;
+  --secondary: #203A43;
+  --accent: #2C5364;
+  --headBlue: #25CEF4;
+}
+
+body {
+  font-style: "Poppins";
+  /* background: linear-gradient(to right, #0F2027, #203A43, #182e38); */
+  background: #111;
+  overflow-x: hidden;
+}
+
+.logo {
+  font-weight: 400;
+  font-family: "Great Vibes", cursive;
+}
+
+.custom-blue {
+  color: var(--headBlue);
+}
+.nav-components a {
+  cursor: pointer;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  position: relative; 
+}
+
+.nav-components a:hover {
+  color: var(--headBlue);
+  transform: scale(1.1); 
+}
+
+.nav-components a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; 
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.nav-components a:hover::after {
+  width: 100%;
+}
