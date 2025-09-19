@@ -31,7 +31,6 @@ function Footer() {
                     <h2 className="text-xl font-semibold text-white mb-4">Contact</h2>
                     <p className="mb-2">📍 Maxnet Office, R-324 Block 15  </p>
                     <p className="mb-2">📞 +92 316 2674302</p>
-                    <p className="mb-2">📞 +92 345 3619183</p>
                     <p className="mb-4">✉️ maxnetnoman@gmail.com</p>
 
                     {/* Socials */}

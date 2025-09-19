@@ -77,7 +77,7 @@ export default function Home() {
           {["09", "14", "15"].map((block) => (
             <p
               key={block}
-              className="text-4xl md:text-5xl bg-gradient-to-b from-cyan-400 to-fuchsia-500 text-white font-bold p-4 md:p-8 rounded-full animate-pulse"
+              className="text-4xl md:text-5xl bg-gradient-to-b from-cyan-400 to-cyan-700 text-white font-bold p-4 md:p-8 rounded-full animate-pulse"
             >
               {block}
             </p>

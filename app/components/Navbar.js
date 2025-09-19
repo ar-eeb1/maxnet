@@ -62,12 +62,14 @@ function Navbar() {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex gap-10 text-white text-lg font-medium nav-components">
+        <div className="hidden md:flex gap-10 text-white text-lg font-medium nav-components items-center">
           <Link href='/'>Home</Link>
           <Link href='/#plan'>Plan</Link>
           <Link href='/#coverage'>Coverage</Link>
           <Link href='/#deals'>Deals</Link>
           <Link href='/about'>About Us</Link>
+          <Link href='/help-center'>Help Center</Link>
+          <Link href='/shop' className='bg-gradient-to-r from-cyan-400 to-cyan-600  px-4 py-2 rounded-md hover:text-white'>SHOP</Link>
         </div>
 
         {/* Buttons */}
