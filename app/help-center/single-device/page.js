@@ -12,7 +12,9 @@ function Internet() {
             <WifiOff className='w-12 h-12 text-red-400' />
           </div>
           <h1 className='text-5xl font-bold text-white mb-4'>Internet Troubleshooting</h1>
-          <p className='text-xl text-gray-300 max-w-2xl mx-auto'>Other devices working but yours isn't? Follow these steps to fix common connection issues</p>
+          <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
+            Other devices working but yours isn&apos;t? Follow these steps to fix common connection issues
+          </p>
         </div>
       </div>
 
@@ -53,22 +55,24 @@ function Internet() {
               <div className='flex-1'>
                 <h2 className='text-3xl font-bold text-white mb-4'>Check Time and Date Settings</h2>
                 <p className='text-gray-300 text-lg mb-6'>
-                  The most common cause when only your device can't connect is incorrect time and date settings.
+                  The most common cause when only your device can&apos;t connect is incorrect time and date settings.
                 </p>
                 <div className='bg-red-500/10 border border-red-500/20 rounded-xl p-6'>
                   <div className='flex items-center gap-3 mb-4'>
                     <AlertTriangle className='w-6 h-6 text-red-400' />
                     <p className='text-red-400 font-semibold text-lg'>Why Time Matters:</p>
                   </div>
-                  <p className='text-gray-300 mb-4'>SSL certificates and network authentication require accurate time synchronization. Wrong date/time prevents secure connections.</p>
+                  <p className='text-gray-300 mb-4'>
+                    SSL certificates and network authentication require accurate time synchronization. Wrong date/time prevents secure connections.
+                  </p>
                   
                   <div className='bg-cyan-500/10 border border-cyan-500/20 rounded-lg p-4'>
-                    <h4 className='text-cyan-300 font-semibold mb-2'>Quick Fix:</h4>
+                    <h4 className='text-cyan-300 font-semibold mb-2'>Quick Fix</h4>
                     <ul className='text-gray-300 space-y-1 ml-4'>
-                      <li>• Go to your device's Settings</li>
-                      <li>• Find "Date & Time" or "Time & Date"</li>
-                      <li>• Enable "Automatic Date & Time"</li>
-                      <li>• Or manually set the correct date and time</li>
+                      <li>&bull; Go to your device&apos;s Settings</li>
+                      <li>&bull; Find &quot;Date &amp; Time&quot; or &quot;Time &amp; Date&quot;</li>
+                      <li>&bull; Enable &quot;Automatic Date &amp; Time&quot;</li>
+                      <li>&bull; Or manually set the correct date and time</li>
                     </ul>
                   </div>
                 </div>
@@ -95,10 +99,10 @@ function Internet() {
                   <div className='bg-blue-500/10 border border-blue-500/20 rounded-xl p-6'>
                     <h3 className='text-xl font-bold text-blue-300 mb-4'>🪟 Windows</h3>
                     <div className='space-y-2 text-sm text-gray-300'>
-                      <p>• Right-click on time in taskbar</p>
-                      <p>• Select "Adjust date/time"</p>
-                      <p>• Turn ON "Set time automatically"</p>
-                      <p>• Click "Sync now"</p>
+                      <p>&bull; Right-click on time in taskbar</p>
+                      <p>&bull; Select &quot;Adjust date/time&quot;</p>
+                      <p>&bull; Turn ON &quot;Set time automatically&quot;</p>
+                      <p>&bull; Click &quot;Sync now&quot;</p>
                     </div>
                   </div>
 
@@ -106,9 +110,9 @@ function Internet() {
                   <div className='bg-gray-500/10 border border-gray-500/20 rounded-xl p-6'>
                     <h3 className='text-xl font-bold text-gray-300 mb-4'>🍎 macOS</h3>
                     <div className='space-y-2 text-sm text-gray-300'>
-                      <p>• System Preferences → Date & Time</p>
-                      <p>• Check "Set date and time automatically"</p>
-                      <p>• Restart if needed</p>
+                      <p>&bull; System Preferences → Date &amp; Time</p>
+                      <p>&bull; Check &quot;Set date and time automatically&quot;</p>
+                      <p>&bull; Restart if needed</p>
                     </div>
                   </div>
 
@@ -116,9 +120,9 @@ function Internet() {
                   <div className='bg-green-500/10 border border-green-500/20 rounded-xl p-6'>
                     <h3 className='text-xl font-bold text-green-300 mb-4'>🤖 Android</h3>
                     <div className='space-y-2 text-sm text-gray-300'>
-                      <p>• Settings → System → Date & time</p>
-                      <p>• Enable "Use network-provided time"</p>
-                      <p>• Toggle airplane mode on/off</p>
+                      <p>&bull; Settings → System → Date &amp; time</p>
+                      <p>&bull; Enable &quot;Use network-provided time&quot;</p>
+                      <p>&bull; Toggle airplane mode on/off</p>
                     </div>
                   </div>
 
@@ -126,9 +130,9 @@ function Internet() {
                   <div className='bg-gray-600/10 border border-gray-600/20 rounded-xl p-6'>
                     <h3 className='text-xl font-bold text-gray-300 mb-4'>📱 iOS</h3>
                     <div className='space-y-2 text-sm text-gray-300'>
-                      <p>• Settings → General → Date & Time</p>
-                      <p>• Turn ON "Set Automatically"</p>
-                      <p>• Restart device if needed</p>
+                      <p>&bull; Settings → General → Date &amp; Time</p>
+                      <p>&bull; Turn ON &quot;Set Automatically&quot;</p>
+                      <p>&bull; Restart device if needed</p>
                     </div>
                   </div>
                 </div>
@@ -147,7 +151,7 @@ function Internet() {
               <div className='flex-1'>
                 <h2 className='text-3xl font-bold text-white mb-4'>Additional Troubleshooting</h2>
                 <p className='text-gray-300 text-lg mb-6'>
-                  If time and date correction doesn't solve the issue, try these additional steps.
+                  If time and date correction doesn&apos;t solve the issue, try these additional steps.
                 </p>
                 
                 <div className='space-y-4'>
@@ -172,7 +176,9 @@ function Internet() {
                       <AlertTriangle className='w-5 h-5 text-cyan-400' />
                       <span className='text-cyan-300 font-semibold'>Device Restart</span>
                     </div>
-                    <p className='text-gray-300 text-sm'>Restart your device after making time/date changes to ensure all services reload properly.</p>
+                    <p className='text-gray-300 text-sm'>
+                      Restart your device after making time/date changes to ensure all services reload properly.
+                    </p>
                   </div>
                 </div>
               </div>
