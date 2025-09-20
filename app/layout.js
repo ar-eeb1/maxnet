@@ -33,7 +33,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} ${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${poppins.className} ${geistSans.variable} ${geistMono.variable} overflow-x-hidden`}>
         <SpeedInsights/>
         <Script
           src="https://cdn.lordicon.com/lordicon.js"

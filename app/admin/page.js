@@ -97,6 +97,12 @@ function ConnectionRequestsTable() {
                                             <span className='text-white font-semibold'>Plan</span>
                                         </div>
                                     </th>
+                                    <th className='px-6 py-4 text-left'>
+                                        <div className='flex items-center gap-2'>
+                                            <Wifi className='w-4 h-4 text-cyan-400' />
+                                            <span className='text-white font-semibold'>Deal</span>
+                                        </div>
+                                    </th>
                                     <th className='px-6 py-4 text-center'>
                                         <div className='flex items-center justify-center gap-2'>
                                             <Wifi className='w-4 h-4 text-blue-400' />
@@ -153,6 +159,12 @@ function ConnectionRequestsTable() {
                                             <div className={`inline-flex px-3 py-1 rounded-full text-sm font-medium ${c.plan ? 'bg-cyan-500/20 text-cyan-300' : 'bg-gray-500/20 text-gray-400'
                                                 }`}>
                                                 {c.plan || '-'}
+                                            </div>
+                                        </td>
+                                        <td className='px-6 py-4'>
+                                            <div className={`inline-flex px-3 py-1 rounded-full text-sm font-medium ${c.plan ? 'bg-cyan-500/20 text-cyan-300' : 'bg-gray-500/20 text-gray-400'
+                                                }`}>
+                                                {c.deal || '-'}
                                             </div>
                                         </td>
                                         <td className='px-6 py-4 text-center'>

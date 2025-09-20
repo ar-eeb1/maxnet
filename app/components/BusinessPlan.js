@@ -13,7 +13,7 @@ const handleChoosePlan = (planValue) =>{
   return (
     <div id='plan'>
        <div className="businessPlans w-screen hover:bg-gray-50 duration-500 mb-10 ">
-            <h1 className="text-5xl md:text-7xl font-bold text-black p-10 ">Business Plans</h1>
+            <h1 className="text-4xl md:text-7xl font-bold text-black p-10 ">Business Plans</h1>
             {/* cards div */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-5 ">
               <div className="card1 bg-white flex flex-col w-[320px] rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-transform duration-300  overflow-hidden ">
@@ -42,7 +42,7 @@ const handleChoosePlan = (planValue) =>{
 
                 <div className="flex justify-center pb-6">
                   <button className="bg-gradient-to-r from-cyan-500 to-blue-600 cursor-pointer px-6 py-2 rounded-full text-white font-semibold shadow-md hover:shadow-lg hover:scale-110 transition"
-                  onClick={()=>handleChoosePlan("p2")}
+                  onClick={()=>handleChoosePlan("P2-52")}
                   >
                     Choose Plan
                   </button>
@@ -75,7 +75,7 @@ const handleChoosePlan = (planValue) =>{
 
                 <div className="flex justify-center pb-6">
                   <button className="bg-gradient-to-r from-cyan-500 to-blue-600 cursor-pointer px-6 py-2 rounded-full text-white font-semibold shadow-md hover:shadow-lg hover:scale-110 transition"
-                  onClick={()=>handleChoosePlan("p1")}
+                  onClick={()=>handleChoosePlan("P1-102")}
                   >
                     Choose Plan
                   </button>

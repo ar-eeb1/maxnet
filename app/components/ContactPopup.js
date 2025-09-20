@@ -10,7 +10,7 @@ export default function ContactPopup() {
 
   const handleOpen = () => setIsOpen(true);
   const handleClose = () => setIsOpen(false);
-  
+
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
@@ -24,7 +24,7 @@ export default function ContactPopup() {
       {/* Contact Button */}
       <Button
         onClick={handleOpen}
-        className="bg-gradient-to-r from-cyan-400 to-cyan-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:scale-105 hover:shadow-lg transition cursor-pointer"
+        className="bg-gradient-to-r from-cyan-400 to-cyan-600 text-white md:px-4 md:py-2 px-3 py-3 text-sm rounded-md flex items-center gap-2 hover:scale-105 hover:shadow-lg transition cursor-pointer"
       >
         <IoCallOutline />
         CONTACT US
@@ -64,11 +64,14 @@ export default function ContactPopup() {
                   >
                     <IoCallOutline />
                   </a>
-                  <Button
-                    className="text-gray-500 hover:text-gray-700 transition text-lg"
-                  >
-                    <FaRegCopy />
-                  </Button>
+                  <div>
+
+                    <Button
+                      className="text-gray-500 hover:text-gray-700 transition text-lg"
+                    >
+                      <FaRegCopy />
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>

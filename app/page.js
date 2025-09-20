@@ -40,15 +40,15 @@ export default function Home() {
 
 
   return (
-    <div>
-      <div className="hero flex items-center justify-center h-[650px] md:h-[800px] flex-col md:p-[430px] mt-3  ">
-        <h1 className=" font-bold text-white  flex flex-col text-center text-5xl md:text-8xl md:font-extrabold ">Maxnet <span className="custom-blue">Internet Service Provider</span></h1>
-        <div className="flex flex-col items-center text-center text-white w-[400px] md:w-[800px] text-xl md:text-2xl pt-10">Powering connections for 17 years. Delivering reliable, high-speed internet solutions that keep you connected to what matters most, trusted by More than
-          <p className="pt-5 pb-1"><span className="text-blue-600 font-bold text-7xl" ref={countRef}>0</span>+</p>users.</div>
+    <div className="box-border">
+      <div className="hero flex items-center  md:justify-center  md:h-[800px] flex-col md:p-[430px] mt-3 pb-12  ">
+        <h1 className=" font-bold text-white  flex flex-col text-center text-5xl md:text-8xl md:font-extrabold ">Maxnet <span className="custom-blue text-4xl md:text-6xl">Internet Service Provider</span></h1>
+        <div className="flex flex-col items-center text-center text-white w-[400px] md:w-[800px] text-l md:text-2xl pt-10">Powering connections for 17 years. Delivering reliable, high-speed internet solutions that keep you connected to what matters most, trusted by More than
+          <p className="pt-5 pb-1"><span className="text-blue-600 font-bold text-5xl md:text-7xl" ref={countRef}>0</span>+</p>users.</div>
 
         <div className="flex gap-4 nav-btn mt-5">
           <Link href="/getConnected">
-            <button title="get connected" className=" bg-gradient-to-r from-cyan-400 to-cyan-600 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:scale-105 hover:shadow-lg transition">
+            <button title="get connected" className=" bg-gradient-to-r from-cyan-400 to-cyan-600 text-white md:px-4 md:py-2 px-3 py-3 text-sm rounded-md flex items-center gap-2 hover:scale-105 hover:shadow-lg transition">
               <AiOutlineThunderbolt /> GET CONNECTED
             </button>
           </Link>
@@ -59,8 +59,8 @@ export default function Home() {
       <div className="plans flex flex-col bg-white">
 
         <div className="plan-head flex text-center w-full justify-center items-center flex-col">
-          <h1 className="text-5xl font-bold mt-10">Choose Your Perfect Plan</h1>
-          <h6 className="text-gray-500 font-medium text-xl md:text-2xl pt-5">Fast, reliable internet plans designed for every need. From home users to enterprises, we&apos;ve got you covered.</h6>
+          <h1 className="text-3xl md:text-5xl font-bold mt-10">Choose Your Perfect Plan</h1>
+          <h6 className="text-gray-500 font-medium  text-l md:text-2xl pt-5">Fast, reliable internet plans designed for every need. From home users to enterprises, we&apos;ve got you covered.</h6>
 
           <BusinessPlan />
           <ConsumerPlan />
