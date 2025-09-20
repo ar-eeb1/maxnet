@@ -415,7 +415,6 @@ const HelpCenter = () => {
           </div>
         </section>
       </div>
-      <ContactPopup />
     </div>
   );
 };

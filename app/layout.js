@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import PageTransition from "./components/PageTransition"; // ⬅️ client wrapper
 import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const poppins = Poppins({
   weight: ["400", "600", "700"],
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.className} ${geistSans.variable} ${geistMono.variable}`}>
+        <SpeedInsights/>
         <Script
           src="https://cdn.lordicon.com/lordicon.js"
           strategy="beforeInteractive" // loads before React runs
