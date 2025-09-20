@@ -2,7 +2,19 @@
 import React, { useState } from "react";
 import ContactPopup from "../components/ContactPopup";
 import Link from "next/link";
-import { ChevronDown, ChevronRight, Wifi, Router, Zap, HelpCircle, CheckCircle, AlertCircle, WifiOff, EthernetPort, TabletSmartphone } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronRight,
+  Wifi,
+  Router,
+  Zap,
+  HelpCircle,
+  CheckCircle,
+  AlertCircle,
+  WifiOff,
+  EthernetPort,
+  TabletSmartphone,
+} from "lucide-react";
 
 const HelpCenter = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -38,7 +50,7 @@ const HelpCenter = () => {
                 href="/help-center/internet-not-working"
                 className="text-lg font-medium text-red-300 hover:text-red-200 transition-colors"
               >
-                Cable Internet Not working
+                Cable Internet Not Working
               </Link>
             </div>
             <p className="text-gray-400 mt-2 ml-9">
@@ -68,7 +80,7 @@ const HelpCenter = () => {
                 href="/help-center/fiber-not-working"
                 className="text-lg font-medium text-orange-300 hover:text-orange-200 transition-colors"
               >
-                Fibre-Optic Internet Not working
+                Fibre-Optic Internet Not Working
               </Link>
             </div>
             <p className="text-gray-400 mt-2 ml-9">
@@ -83,7 +95,7 @@ const HelpCenter = () => {
                 href="/help-center/single-device"
                 className="text-lg font-medium text-purple-300 hover:text-purple-200 transition-colors"
               >
-                Only single Device internet is not working
+                Only Single Device Internet Is Not Working
               </Link>
             </div>
             <p className="text-gray-400 mt-2 ml-9">
@@ -294,13 +306,13 @@ const HelpCenter = () => {
                       Visit our plans section for complete details about all
                       available plans:
                     </p>
-                    <a
+                    <Link
                       href="/#plan"
                       className="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 px-4 py-2 rounded-lg font-medium text-white transition-colors"
                     >
                       View Plans
                       <ChevronRight className="w-4 h-4" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               )}
@@ -388,19 +400,12 @@ const HelpCenter = () => {
                         <span>Check for background downloads</span>
                       </div>
                       <div className="flex items-center gap-3 p-3 bg-gray-700/50 rounded-lg">
-                        <Zap className="w-5 h-5 text-green-400" />
-                        <div className="flex items-center gap-2">
-                          <span>Test your speed using mobile app/Desktop :</span>
-                          <a
-                            href="https://www.speedtest.net/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-cyan-400 hover:text-cyan-300 underline font-medium transition-colors"
-                          >
-                            Speed Test ↗
-                          </a>
-                          <span>And send us</span>
-                        </div>
+                        <Wifi className="w-5 h-5 text-green-400" />
+                        <span>Test with a wired connection</span>
+                      </div>
+                      <div className="flex items-center gap-3 p-3 bg-gray-700/50 rounded-lg">
+                        <AlertCircle className="w-5 h-5 text-red-400" />
+                        <span>Contact support if problem persists</span>
                       </div>
                     </div>
                   </div>
@@ -409,22 +414,8 @@ const HelpCenter = () => {
             </div>
           </div>
         </section>
-
-        {/* Contact Section */}
-        <div className="mt-16 text-center">
-          <div className="bg-gray-800 border border-blue-500/30 rounded-lg p-8">
-            <h3 className="text-xl font-semibold text-white mb-3">
-              Still need help?
-            </h3>
-            <p className="text-gray-400 mb-6">
-              Our support team is here to assist you 24/7
-            </p>
-            <button className="">
-              <ContactPopup />
-            </button>
-          </div>
-        </div>
       </div>
+      <ContactPopup />
     </div>
   );
 };
