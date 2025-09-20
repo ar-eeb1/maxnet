@@ -231,7 +231,7 @@ function Password() {
                     <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 text-center'>
                         <Contact className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
                         <h3 className='text-2xl font-bold text-white mb-2'>Still Need Help?</h3>
-                        <p className='text-gray-300 mb-4'>If these steps didn't resolve your issue, our technical support team is here to help.</p>
+                        <p className='text-gray-300 mb-4'>If these steps didn&apos;t resolve your issue, our technical support team is here to help.</p>
                         <button className=''>
                             <ContactPopup />
                         </button>

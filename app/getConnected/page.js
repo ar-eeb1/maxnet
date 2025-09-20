@@ -51,18 +51,21 @@ function GetConnectedPage() {
   }, [preSelectedDeal, setValue]);
 
   const onSubmit =async (data) => {
-
-    // Build server 
+ 
     try {
       let r = await fetch("/api/get-connected",{
         method : "POST",
         headers:{ "Content-Type" : "application/json"},
         body: JSON.stringify(data)
       })
-      let res = await r.json()
-      console.log("respone " , res);
+      if (r.ok) {
+        toast.success("Form submitted")
+        e.target.reset()
+      } else {
+        toast.error("submission failed , Try again later")
+      }
     } catch (error) {
-       console.error("❌ FETCH ERROR:", err);
+       console.error("❌ FETCH ERROR:", error);
     }
   };
 

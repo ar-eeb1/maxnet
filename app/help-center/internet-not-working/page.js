@@ -142,7 +142,7 @@ function Internet() {
                       </div>
                       <div className='flex items-start gap-3'>
                         <Dot className='w-6 h-6 text-gray-400 flex-shrink-0 mt-0.5' />
-                        <p className='text-gray-300'>If there's no indicator, contact your ISP</p>
+                        <p className='text-gray-300'>If there&apos;s no indicator, contact your ISP</p>
                       </div>
                     </div>
                   </div>
@@ -154,7 +154,7 @@ function Internet() {
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 text-center'>
             <Contact className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
             <h3 className='text-2xl font-bold text-white mb-2'>Still Need Help?</h3>
-            <p className='text-gray-300 mb-4'>If these steps didn't resolve your issue, our technical support team is here to help.</p>
+            <p className='text-gray-300 mb-4'>If these steps didn&apos;t resolve your issue, our technical support team is here to help.</p>
             <button className=''>
               <ContactPopup />
             </button>

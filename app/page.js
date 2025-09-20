@@ -43,8 +43,8 @@ export default function Home() {
     <div>
       <div className="hero flex items-center justify-center h-[650px] md:h-[800px] flex-col md:p-[430px] mt-3  ">
         <h1 className=" font-bold text-white  flex flex-col text-center text-5xl md:text-8xl md:font-extrabold ">Maxnet <span className="custom-blue">Internet Service Provider</span></h1>
-        <div className="flex flex-col items-center text-center text-white w-[400px] md:w-[800px] text-xl md:text-2xl pt-10">Powering connections for 17 years. Delivering reliable, high-speed internet solutions that keep you connected to what matters most — trusted by More than
-          <p className="pt-5 pb-1"><span className="text-blue-600 font-bold text-7xl" ref={countRef}>0</span>+</p>customers.</div>
+        <div className="flex flex-col items-center text-center text-white w-[400px] md:w-[800px] text-xl md:text-2xl pt-10">Powering connections for 17 years. Delivering reliable, high-speed internet solutions that keep you connected to what matters most, trusted by More than
+          <p className="pt-5 pb-1"><span className="text-blue-600 font-bold text-7xl" ref={countRef}>0</span>+</p>users.</div>
 
         <div className="flex gap-4 nav-btn mt-5">
           <Link href="/getConnected">
